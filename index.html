@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>scriptreplay in javascript</title>
+<script type="text/javascript" src="./VT100.js" ></script>
+<script type="text/javascript" src="./scriptreplay.js" ></script>
+<script type="text/javascript"><!--
+window.addEventListener("load", function(evt) {
+    vt = new VT100(80, 24, "term");
+    vt.clear();
+    vt.refresh();
+    vt.write(
+"\n\n\n" +
+" * This javascript terminal window is 80x24 characters, so it might be\n" +
+"   best to adjust your terminal window to that size as well using the\n" +
+"   following to check:\n" +
+"      $ watch \"tput cols; tput lines\"\n" +
+" * Start recording:\n" +
+"      $ SHELL=/bin/sh TERM=vt100 script -t typescript 2> timingfile\n" +
+" * Do your stuff and when done exit script with `exit`, `logout` or\n" +
+"   ctrl-d.\n" +
+" * To test how your recorded session looks like, use:\n" +
+"      $ scriptreplay timingfile typescript\n" +
+" * Enter `timingfile` and `typescript` into form above and hit the play\n" +
+"   button.\n");
+    document.getElementById("stop").addEventListener("click", stop, false);
+    document.getElementById("speed").addEventListener('change', set_speed, false);
+    document.getElementById("fontsize").addEventListener('change', set_fontsize, false);
+    document.getElementById("play").addEventListener("click", play, false);
+
+    var samples = document.querySelectorAll("ul#sample>li>a[id^=\"sample_\"]");
+    for (var i = 0; i < samples.length; i++) {
+      samples[i].addEventListener('click', function(evt) {
+          play_file(evt.target.id.substr(7));
+      }, false);
+    }
+    }, false);
+
+--></script>
+</head>
+
+<body>
+
+<h2>scriptreplay in javascript</h2>
+
+<p><tt>script</tt> and <tt>scriptreplay</tt> are part of the <tt>bsdutils</tt>
+package in debian and ubuntu, <tt>util-linux-ng</tt> in fedora and
+<tt>util-linux</tt> in suse. They allow to capture a terminal or script output
+and replay it.</p>
+
+<p>This page uses the <a href="./VT100.js">vt100 emulator</a> by
+<a href="http://fzort.org/bi/o.php#vt100_js">frank bi</a> and adds
+<a href="./scriptreplay.js">code of my own</a> to read typescript and timing
+files to make it possible to replay captured scripts a web browser.</p>
+
+<p>By adding an upload facility to this it would be possible to have a youtube
+or pastebin for terminal sessions. Due to laziness this remains a proof of
+concept for now though.</p>
+
+<p>(C) 2011 Johannes 'josch' Schauer &lt;j [dot] schauer [at] email [dot] de&gt;</p>
+
+<fieldset>
+<legend>file input</legend>
+typescript: <input type="file" id="typescript" name="typescript" /><br />
+timingfile: <input type="file" id="timingfile" name="typescript" /><br />
+</fieldset>
+<fieldset>
+<legend>samples</legend>
+<ul id="sample">
+<li><a href="javascript:void()" id="sample_qemu">qemu boot</a></li>
+<li><a href="javascript:void()" id="sample_starwars">star wars</a></li>
+</ul>
+</fieldset>
+
+<tt><pre id=term></pre></tt>
+
+<fieldset>
+<legend>play control</legend>
+<button id="play">play</button>
+<button id="stop">stop</button>
+</fieldset>
+<fieldset>
+<legend>output properties</legend>
+Font size
+<select id="fontsize">
+  <option value="8">8</option>
+  <option value="10">10</option>
+  <option value="12" selected="selected">12</option>
+  <option value="14">14</option>
+  <option value="16">16</option>
+  <option value="18">18</option>
+</select>
+Speed
+<select id="speed">
+  <option value="0.25">slowest</option>
+  <option value="0.5">slower</option>
+  <option value="0.75">slow</option>
+  <option value="1.0" selected="selected">normal</option>
+  <option value="1.5">fast</option>
+  <option value="2.0">faster</option>
+  <option value="4.0">fastest</option>
+</select>
+</fieldset>
+</body>
+
+</html>

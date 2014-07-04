@@ -1,0 +1,262 @@
+Script started on Mon 04 Jul 2011 10:53:10 AM CEST
+$ qemu-system-mipsel -M malta -kernel vmlinux-2.6.32-5-4kc-malta -hda hda.img -append "root=/dev/sda1 console=ttyS0" -nographic
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 2.6.32-5-4kc-malta (Debian 2.6.32-35) (dannf@debian.org) (gcc version 4.3.5 (Debian 4.3.5-4) ) #1 Tue Jun 14 18:46:39 UTC 2011
+[    0.000000] 
+[    0.000000] LINUX started...
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU revision is: 00019300 (MIPS 24Kc)
+[    0.000000] FPU revision is: 00000000
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 00001000 @ 00000000 (reserved)
+[    0.000000]  memory: 000ef000 @ 00001000 (ROM data)
+[    0.000000]  memory: 005b2000 @ 000f0000 (reserved)
+[    0.000000]  memory: 0795e000 @ 006a2000 (usable)
+[    0.000000] Wasting 54336 bytes for tracking 1698 unused pages
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone PFN ranges:
+[    0.000000]   DMA      0x00000000 -> 0x00001000
+[    0.000000]   Normal   0x00001000 -> 0x00008000
+[    0.000000] Movable zone start PFN for each node
+[    0.000000] early_node_map[1] active PFN ranges
+[    0.000000]     0: 0x00000000 -> 0x00008000
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line: root=/dev/sda1 console=ttyS0
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Primary instruction cache 2kB, VIPT, 2-way, linesize 16 bytes.
+[    0.000000] Primary data cache 2kB, 2-way, VIPT, no aliases, linesize 16 bytes
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 122972k/124280k available (3979k kernel code, 1128k reserved, 1088k data, 208k init, 0k highmem)
+[    0.000000] SLUB: Genslabs=7, HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS:256
+[    0.000000] CPU frequency 200.00 MHz
+[    0.000000] Console: colour dummy device 80x25
+[    0.008000] Calibrating delay loop... 784.38 BogoMIPS (lpj=1568768)
+[    0.088000] Security Framework initialized
+[    0.088000] SELinux:  Disabled at boot.
+[    0.088000] Mount-cache hash table entries: 512
+[    0.096000] Initializing cgroup subsys ns
+[    0.096000] Initializing cgroup subsys cpuacct
+[    0.096000] Initializing cgroup subsys devices
+[    0.096000] Initializing cgroup subsys freezer
+[    0.096000] Initializing cgroup subsys net_cls
+[    0.108000] devtmpfs: initialized
+[    0.120000] regulator: core version 0.5
+[    0.120000] NET: Registered protocol family 16
+[    0.136000] bio: create slab <bio-0> at 0
+[    0.140000] vgaarb: loaded
+[    0.140000] SCSI subsystem initialized
+[    0.144000] pci 0000:00:0a.3: BAR 14: address space collision on of bridge [0x1100-0x110f]
+[    0.144000] pci 0000:00:0a.3: quirk: region 1100-110f claimed by PIIX4 SMB
+[    0.148000] vgaarb: device added: PCI:0000:00:12.0,decodes=io+mem,owns=none,locks=none
+[    0.148000] pci 0000:00:0a.3: BAR 14: bogus alignment [0x1100-0x110f] flags 0x100
+[    0.156000] Switching to clocksource MIPS
+[    0.180000] NET: Registered protocol family 2
+[    0.180000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.184000] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.184000] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.184000] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.184000] TCP reno registered
+[    0.184000] NET: Registered protocol family 1
+[    0.188000] RPC: Registered udp transport module.
+[    0.188000] RPC: Registered tcp transport module.
+[    0.188000] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.196000] audit: initializing netlink socket (disabled)
+[    0.200000] type=2000 audit(1309769597.200:1): initialized
+[    0.212000] VFS: Disk quotas dquot_6.5.2
+[    0.212000] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.220000] msgmni has been set to 240
+[    0.228000] alg: No test for stdrng (krng)
+[    0.228000] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    0.228000] io scheduler noop registered
+[    0.232000] io scheduler anticipatory registered
+[    0.232000] io scheduler deadline registered
+[    0.232000] io scheduler cfq registered (default)
+[    0.232000] PCI: Enabling device 0000:00:12.0 (0000 -> 0002)
+[    0.232000] cirrusfb 0000:00:12.0: Cirrus Logic chipset on PCI bus, RAM (4096 kB) at 0x10000000
+[    0.448000] Console: switching to colour frame buffer device 80x30
+[    0.468000] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.472000] serial8250.0: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+[    0.472000] console [ttyS0] enabled, bootconsole disabled
+[    0.472000] console [ttyS0] enabled, bootconsole disabled
+[    0.476000] serial8250.0: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+[    0.476000] serial8250.0: ttyS2 at MMIO 0x1f000900 (irq = 18) is a 16550A
+[    0.484000] brd: module loaded
+[    0.488000] PCI: Enabling device 0000:00:0a.1 (0000 -> 0001)
+[    0.492000] scsi0 : ata_piix
+[    0.492000] scsi1 : ata_piix
+[    0.492000] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0x1040 irq 14
+[    0.492000] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0x1048 irq 15
+[    0.496000] pcnet32.c:v1.35 21.Apr.2008 tsbogend@alpha.franken.de
+[    0.500000] PCI: Enabling device 0000:00:0b.0 (0000 -> 0003)
+[    0.500000] pcnet32: PCnet/PCI II 79C970A at 0x1020, 52:54:00:12:34:56 assigned IRQ 10.
+[    0.500000] eth0: registered as PCnet/PCI II 79C970A
+[    0.500000] pcnet32: 1 cards_found.
+[    0.504000] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.504000] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.508000] mice: PS/2 mouse device common for all mice
+[    0.508000] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[    0.508000] rtc0: alarms up to one day, 242 bytes nvram
+[    0.512000] TCP cubic registered
+[    0.512000] NET: Registered protocol family 17
+[    0.512000] registered taskstats version 1
+[    0.516000] rtc_cmos rtc_cmos: setting system clock to 2011-07-04 08:35:13 UTC (1309768513)
+[    0.516000] Initalizing network drop monitor service
+[    0.612000] input: AT Raw Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+[    0.660000] ata2.00: ATAPI: QEMU DVD-ROM, 0.12.5, max UDMA/100
+[    0.664000] ata1.00: ATA-7: QEMU HARDDISK, 0.12.5, max UDMA/100
+[    0.664000] ata1.00: 8192000 sectors, multi 16: LBA48 
+[    0.664000] ata1.00: configured for UDMA/33
+[    0.672000] ata2.00: configured for UDMA/33
+[    0.676000] scsi 0:0:0:0: Direct-Access     ATA      QEMU HARDDISK    0.12 PQ: 0 ANSI: 5
+[    0.680000] sd 0:0:0:0: [sda] 8192000 512-byte logical blocks: (4.19 GB/3.90 GiB)
+[    0.680000] sd 0:0:0:0: [sda] Write Protect is off
+[    0.684000] scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     0.12 PQ: 0 ANSI: 5
+[    0.684000] sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    0.688000]  sda: sda1 sda2 < sda5 >
+[    0.704000] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.712000] kjournald starting.  Commit interval 5 seconds
+[    0.716000] EXT3-fs: mounted filesystem with ordered data mode.
+[    0.716000] VFS: Mounted root (ext3 filesystem) readonly on device 8:1.
+[    0.720000] Freeing prom memory: 956k freed
+[    0.732000] Freeing unused kernel memory: 208k freed
+INIT: version 2.88 booting
+Using makefile-style concurrent boot in runlevel S.
+.udev/ already exists on the static /dev! ... [33m(warning).[39;49m
+Starting the hotplug events dispatcher: udevd.
+Synthesizing the initial hotplug events...done.
+Waiting for /dev to be fully populated...[    5.612000] usbcore: registered new interface driver usbfs
+[    5.612000] usbcore: registered new interface driver hub
+[    5.664000] piix4_smbus 0000:00:0a.3: SMBus Host Controller at 0x1100, revision 0
+[    5.664000] usbcore: registered new device driver usb
+[    5.864000] sr0: scsi3-mmc drive: 4x/4x xa/form2 tray
+[    5.864000] Uniform CD-ROM driver Revision: 3.20
+[    5.976000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    6.060000] physmap platform flash device: 00400000 at 1e000000
+[    6.108000] uhci_hcd: USB Universal Host Controller Interface driver
+[    6.108000] PCI: Enabling device 0000:00:0a.2 (0000 -> 0001)
+[    6.108000] uhci_hcd 0000:00:0a.2: UHCI Host Controller
+[    6.112000] uhci_hcd 0000:00:0a.2: new USB bus registered, assigned bus number 1
+[    6.128000] uhci_hcd 0000:00:0a.2: irq 11, io base 0x00001000
+[    6.160000] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001
+[    6.160000] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    6.160000] usb usb1: Product: UHCI Host Controller
+[    6.160000] usb usb1: Manufacturer: Linux 2.6.32-5-4kc-malta uhci_hcd
+[    6.160000] usb usb1: SerialNumber: 0000:00:0a.2
+[    6.216000] usb usb1: configuration #1 chosen from 1 choice
+[    6.220000] hub 1-0:1.0: USB hub found
+[    6.220000] hub 1-0:1.0: 2 ports detected
+[    6.236000] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input1
+[    6.308000] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    6.312000] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[    6.976000] physmap-flash.0: PFOW string at 0x0 is not found 
+[    7.056000] cmdlinepart partition parsing not available
+[    7.084000] RedBoot partition parsing not available
+[    7.084000] Using physmap partition information
+[    7.084000] Creating 3 MTD partitions on "physmap-flash.0":
+[    7.084000] 0x000000000000-0x000000100000 : "YAMON"
+[    7.092000] 0x000000100000-0x0000003e0000 : "User FS"
+[    7.096000] 0x0000003e0000-0x000000400000 : "Board Config"
+done.
+Activating swap...[    8.312000] Adding 219128k swap on /dev/sda5.  Priority:-1 extents:1 across:219128k 
+done.
+Checking root file system...fsck from util-linux-ng 2.17.2
+/dev/sda1: clean, 41254/242400 files, 285212/968448 blocks
+done.
+[    8.988000] EXT3 FS on sda1, internal journal
+Cleaning up ifupdown....
+Setting up networking....
+Loading kernel modules...[    9.980000] loop: module loaded
+done.
+Activating lvm and md swap...done.
+Checking file systems...fsck from util-linux-ng 2.17.2
+done.
+Mounting local filesystems...done.
+Activating swapfile swap...done.
+Cleaning up temporary files....
+Configuring network interfaces...done.
+Starting portmap daemon....
+Starting NFS common utilities: statd.
+Cleaning up temporary files...[   14.824000] eth0: link up
+.
+Setting kernel variables ...done.
+INIT: Entering runlevel: 2
+Using makefile-style concurrent boot in runlevel 2.
+Starting NFS common utilities: statd.
+Starting portmap daemon...Already running..
+Starting enhanced syslogd: rsyslogd.
+Starting deferred execution scheduler: atd.
+Starting periodic command scheduler: cron.
+Starting system message bus: dbus.
+Starting MTA: exim4.
+[   28.976000] NET: Registered protocol family 10
+
+Debian GNU/Linux 6.0 debian ttyS0
+
+debian login: root
+Password: 
+Last login: Mon Jul  4 09:33:06 CEST 2011 on ttyS0
+Linux debian 2.6.32-5-4kc-malta #1 Tue Jun 14 18:46:39 UTC 2011 mips
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@debian:~# uname -a
+Linux debian 2.6.32-5-4kc-malta #1 Tue Jun 14 18:46:39 UTC 2011 mips GNU/Linux
+root@debian:~# cat /proc/cpuinfo 
+system type		: MIPS Malta
+processor		: 0
+cpu model		: MIPS 24Kc V0.0  FPU V0.0
+BogoMIPS		: 784.38
+wait instruction	: yes
+microsecond timers	: yes
+tlb_entries		: 16
+extra interrupt vector	: yes
+hardware watchpoint	: yes, count: 1, address/irw mask: [0x0ff8]
+ASEs implemented	:
+shadow register sets	: 1
+core			: 0
+VCED exceptions		: not available
+VCEI exceptions		: not available
+
+root@debian:~# halt
+
+Broadcast message from root@debian (ttyS0) (Mon Jul  4 10:36:14 2011):
+
+The system is going down for system halt NOW!
+INIT: Switching to runlevel: 0
+root@debian:~# INIT: Sending processes the TERM signal
+Using makefile-style concurrent boot in runlevel 0.
+Stopping deferred execution scheduler: atd.
+Stopping MTA: exim4_listener.
+Asking all remaining processes to terminate...done.
+All processes ended within 2 seconds....done.
+Stopping enhanced syslogd: rsyslogd.
+Stopping portmap daemon....
+Stopping NFS common utilities: statd.
+Bad SWSTYLE=0x04
+Deconfiguring network interfaces...Internet Systems Consortium DHCP Client 4.1.1-P1
+Copyright 2004-2010 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+Listening on LPF/eth0/52:54:00:12:34:56
+Sending on   LPF/eth0/52:54:00:12:34:56
+Sending on   Socket/fallback
+DHCPRELEASE on eth0 to 10.0.2.2 port 67
+done.
+Cleaning up ifupdown....
+Saving the system clock.
+Deactivating swap...done.
+Will now halt.
+$ exit
+
+Script done on Mon 04 Jul 2011 10:54:33 AM CEST
