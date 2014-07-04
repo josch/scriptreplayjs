@@ -14,17 +14,17 @@ for now though.
    best to adjust your terminal window to that size as well using the
    following to check:
 
-      $ watch "tput cols; tput lines"
+    $ watch "tput cols; tput lines"
 
  - Start recording:
 
-      $ SHELL=/bin/sh TERM=vt100 script -t typescript 2> timingfile
+    $ SHELL=/bin/sh TERM=vt100 script -t typescript 2> timingfile
 
  - Do your stuff and when done exit script with `exit`, `logout` or
    ctrl-d.
  - To test how your recorded session looks like, use:
 
-      $ scriptreplay timingfile typescript
+    $ scriptreplay timingfile typescript
 
  - Enter `timingfile` and `typescript` into form above and hit the play
    button.
