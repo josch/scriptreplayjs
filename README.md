@@ -1,3 +1,17 @@
+PROJECT MOVED
+=============
+
+This project moved to:
+
+https://gitlab.mister-muffin.de/josch/scriptreplayjs
+
+Rationale: free software needs free tools. See: http://mako.cc/writing/hill-free_tools.html
+
+This copy will remain read-only and will not receive any further updates.
+
+
+
+
 `script` and `scriptreplay` are part of the `bsdutils` package in Debian and
 Ubuntu, `util-linux-ng` in Fedora and `util-linux` in SUSE. They allow to
 capture a terminal or script output and replay it, respectively.
